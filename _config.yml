@@ -1,1 +1,20 @@
-theme: jekyll-theme-hacker
+theme: jekyll-theme-cayman
+
+repository: evry-bergen/open.evry.blog
+
+plugins:
+- jekyll-avatar
+- jekyll-coffeescript
+- jekyll-default-layout
+- jekyll-feed
+- jekyll-gist
+- jekyll-github-metadata
+- jekyll-mentions
+- jekyll-optional-front-matter
+- jekyll-paginate
+- jekyll-readme-index
+- jekyll-redirect-from
+- jekyll-relative-links
+- jekyll-sitemap
+- jekyll-titles-from-headings
+- jemoji

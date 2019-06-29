@@ -1,0 +1,13 @@
+---
+---
+
+$header-bg-color: #00c8c8 !default;
+$header-bg-color-secondary: #7028b7 !default;
+
+@import "{{ site.theme }}";
+
+.project-tagline {
+  a {
+    color: $header-heading-color;
+  }
+}
