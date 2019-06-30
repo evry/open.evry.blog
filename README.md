@@ -17,7 +17,7 @@ Whenever a change is merged to this repository, GitHub Pages will run [Jekyll](h
 
 ### Posts
 
-All posts are located in the `_popsts` directory using [Markdown](#markdown) and [Jekyll Front Matter](https://jekyllrb.com/docs/front-matter/). You can just look at existing blog posts to see the structure, but a simple example looks like this:
+All posts are located in the `_posts` directory using [Markdown](#markdown) and [Jekyll Front Matter](https://jekyllrb.com/docs/front-matter/). You can just look at existing blog posts to see the structure, but a simple example looks like this:
 
 ```yaml
 ---
@@ -30,7 +30,7 @@ Content goes here!
 
 ### Local Development
 
-For running the blog locally for development purposes you only need Docker and Docker Compose installed. Clone the repository aanad run the following command from the repo root:
+For running the blog locally for development purposes you only need Docker and Docker Compose installed. Clone the repository and run the following command from the repo root:
 
 ```
 $ docker up
@@ -68,4 +68,4 @@ This Blog uses the layout and styles from the Jekyll theme you have selected in 
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [openm an issue](./issues) and we’ll help you sort it out.
+Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [open an issue](./issues) and we’ll help you sort it out.
