@@ -1,6 +1,6 @@
 ---
 layout: post
-author: Hans Kristian
+author: Hans Kristian Flaatten
 author_hanndle: Starefossen
 title: Hello World
 date: 2019-06-29
