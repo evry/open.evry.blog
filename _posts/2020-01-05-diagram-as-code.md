@@ -253,5 +253,12 @@ C -->|Three| F[fa:fa-car Car]
 </div>
 
 **NB!** The above diagram is rendered live using the latest version of Mermaid
-inkluded in this blogpost - just take a look at the source code. Happy
-diagramming! 😄
+inkluded in this blogpost - just take a look at the source code.
+
+## Closing Remarks
+
+While some of these tools mentioned in this post is quit mature at this point we
+are not happy with the current state of integrating them with other tools in the
+IaC ecosystem. Our wish for 2020 is that some of these integrations will happen!
+
+Happy diagramming! 😄
