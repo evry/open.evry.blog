@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-
     {% if site.google_analytics %}
       <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
       <script>
@@ -11,6 +10,9 @@
         gtag('config', '{{ site.google_analytics }}');
       </script>
     {% endif %}
+
+    {{ page.html.head }}
+
     <meta charset="UTF-8">
 
 {% seo %}
@@ -40,4 +42,6 @@
       </footer>
     </main>
   </body>
+
+  {{ page.html.script }}
 </html>
