@@ -1,12 +1,18 @@
 # Diagram as Code
 
-With the recent adoption of Infrastructure as Code and the whole [GitOps approach](https://www.weave.works/technologies/gitops/) where everything is stored in git. Tools like [Terraform](https://www.terraform.io), [Kubernetes](https://kuberetes.io/), [Helm](https://helm.sh/), and many others are the representatives of this trend. With all of the information about our infrastructure and application available as code the next piece of the puzzle is a way to visualise this as dynamic diagrams.
+With the recent adoption of Infrastructure as Code we aim to eliminate the impedent mismatch of documentation (eg. how is it supposed to look like) and how it actually set up by driving all changes from a textual representation.
 
-This blogpost aims to give an overview of the current landscape of diagram tools that support some kind of Diagram as Code syntax. Lets dig in! 😄
+While JSON, YAML and HCL does a good job of represebting out intent to a computer it is not easily consumable for hunans - unless you live and breath for these types of configuration languages!
+
+A diagram does a much better job of conveying information and relationships to us mortal humans but they struggle to keep up with the never ending changes as they are often hand drawn and a snapshot somewhere in time. Who knows where the master file for that one Visio diagram is, right?!
+
+What if we could generate our diagrams in the same way as we generate our infrastructure?
+
+This post aims to give an overview of the current state of diagram tools that support some kind of Diagram as Code functionality. Lets dig in! 😄
 
 ## Overview
 
-Bellow is a table over the most popular tools with support for Diagram as Code. We have included some popular proprietary tools in the list but will leave it as an exercise to the reader to explore those as this post will focus on those that are open source.
+Bellow is a table over the most popular tools with support for Diagram as Code. We have included some popular proprietary tools in the list but will leave it as an exercise to the reader to explore those as this post will focus on those that are free and open source.
 
 | Tool                                               | Diagram Language                                            | License                                                                                | Local | Online |
 | -------------------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------------------------------------------- | ----- | ------ |
@@ -22,15 +28,40 @@ Bellow is a table over the most popular tools with support for Diagram as Code. 
 
 > Rock solid, and bindings for just about every language!
 
-![graphviz.png](/Users/hans/Desktop/graphviz.png)
+![graphviz.png](./assets/2020/01/05/graphviz.png)
 
-Graphviz is an open source graph visualisation software. It has several main layout programs. It also has web and interactive graphical interfaces, and auxiliary tools, libraries, and a rich set of language bindings. The main project itself is not investing in graphical user interface editors, but leaving that up to the community to incorporate Graphviz.
+Graphviz is an open source graph visualisation software. It has several main layout programs. It also has web and interactive graphical interfaces, and auxiliary tools, libraries, and a rich set of language bindings. The main project itself is not investing in graphical user interface editors, but leaving that up to the community to incorporate Graphviz. This results in Graphviz often being percived as a little more low-level compared with the others.
 
 The Graphviz layout programs take descriptions of graphs in a simple text language named DOT, and make diagrams in useful formats, such as images and SVG for web pages; PDF or Postscript for inclusion in other documents; or display in an interactive graph browser.
 
 Graphviz has many useful features for concrete diagrams, such as options for colors, fonts, tabular node layouts, line styles, hyperlinks, and custom shapes.
 
 In practice, graphs are usually generated from an external data sources, but they can also be created and edited manually, either as raw text files or within a graphical editor. (Graphviz was not intended to be a Visio replacement, so it is probably frustrating to try to use it that way.)
+
+## PlantUML
+
+> Plantuml is pretty good because it like a mini programming language for diagrams, and not just UML!
+
+PlantUML is another trued and true tiol usef to draw primarily UML diagrams, using a simple and human readable text description. Be careful, because it does not prevent you from drawing inconsistent diagrams (such as having two classes inheriting from each other, for example). So it's more a *drawing* tool than a *modeling* tool.
+
+PlantUML has its own simple, but powerfull, domain specific language (DSL) that allows for a lot of deifferent types of UML diagrams:
+
+* Sequence diagrams;
+* Usecase diagrams;
+* Class diagrams;
+* Activity diagrams;
+* Component diagrams;
+* State diagrams;
+* Object diagrams;
+* Deployment diagrams;
+*Timing diagram.
+
+Also, it supports some non-UML diagrams which are pretty cool, for example the Wireframe diagrams for UI design.
+
+
+https://mchernyavska.wordpress.com/2019/02/23/plantuml-diagrams-as-code/
+
+http://plantuml.com/guide
 
 ## Mermaid ([Live Editor](https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbkFbQ2hyaXN0bWFzXSAtLT58R2V0IG1vbmV5fCBCKEdvIHNob3BwaW5nKVxuQiAtLT4gQ3tMZXQgbWUgdGhpbmt9XG5DIC0tPnxPbmV8IERbTGFwdG9wXVxuQyAtLT58VHdvfCBFW2lQaG9uZV1cbkMgLS0-fFRocmVlfCBGW2ZhOmZhLWNhciBDYXJdXG4iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ))
 
@@ -47,17 +78,6 @@ typora.io: marmaid support
 > This is integrated with Gitlab, you can use it in every textbox.
 > 
 > We used mermaid.js for a while. I didn't like the fact that it worked only in a browser, and installing phantom.js (which installed a whole pre-compiled binary of Chromium) was painful.
-
-## PlantUML
-
-**PlantUML** is used to *draw* UML diagrams, using a simple and human readable text description.  Be careful, because it does not prevent you from drawing inconsistent 
-diagrams (such as having two classes inheriting from each other, for example). So it's more a **drawing** tool than a **modeling** tool.
-
-> Plantuml is pretty good because it like a mini programming language for diagrams, and not just UML
-
-https://mchernyavska.wordpress.com/2019/02/23/plantuml-diagrams-as-code/
-
-http://plantuml.com/guide
 
 ## Reference
 
