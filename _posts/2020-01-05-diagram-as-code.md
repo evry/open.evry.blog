@@ -6,6 +6,7 @@ title: Diagram as Code
 date: 2020-01-05
 tag: [iac]
 published: true
+hn_item_id: 21964800
 html:
   head: |
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.4/mermaid.min.js"></script>
